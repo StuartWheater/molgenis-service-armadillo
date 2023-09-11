@@ -76,7 +76,7 @@ jacocoTestReport {
 
 test {
     useJUnitPlatform()
-    maxParallelForks = Runtime.runtime.availableProcessors() / 2
+    maxParallelForks = (Runtime.runtime.availableProcessors() + 1) / 2
     failFast true
     testLogging {
         events "passed", "skipped", "failed" //, "standardOut", "standardError"
