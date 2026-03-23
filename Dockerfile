@@ -5,6 +5,8 @@ VOLUME /config
 VOLUME /logs
 
 RUN apk update && apk add --no-cache libc6-compat
+RUN apk upgrade --no-cache
+
 
 ARG JAR_FILE
 EXPOSE 8080
